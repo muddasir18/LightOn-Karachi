@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LightOn Karachi provides sample electricity information and helpful resources.">
+  <title>Area Details | LightOn Karachi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">⚡</span>
+        <span><h1>LightOn Karachi</h1><p>Electricity information, made easier</p></span>
+      </a>
+    </div>
+  </header>
+  <div class="nav-wrap"><nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+<a href="area-search.html">Area Search</a>
+<a href="schedule.html">Schedule</a>
+<a href="countdown.html">Countdown</a>
+<a href="areas.html" aria-current="page">Areas</a>
+<a href="tips.html">Tips</a>
+<a href="emergency.html">Emergency</a>
+<a href="faqs.html">FAQs</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="feedback.html">Feedback</a>
+    <button class="secondary" type="button" data-theme-toggle aria-pressed="false">🌙 Dark mode</button>
+  </nav></div>
+  <main>
+
+<div class="eyebrow">Area information</div><h2 id="detail-title">Sample area details</h2>
+<p class="lead">This page is a reusable template for adding verified information about a selected area.</p>
+<div class="grid two">
+  <article class="card"><h3>Area overview</h3><p id="detail-area">No area was selected. Open this page from the Areas page to pass an example area name.</p></article>
+  <article class="card"><h3>Schedule status</h3><p>Not available in this demo. Please check your electricity provider's official website or app for current updates.</p></article>
+</div>
+<div class="notice warning">Do not add unverified outage timings or claim that this page is connected to a utility provider unless you have a verified data source.</div>
+<p><a class="button" href="areas.html">← Back to areas</a></p>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const area = params.get("area");
+  if (area) {
+    const clean = area.replaceAll("-", " ");
+    document.getElementById("detail-title").textContent = clean;
+    document.getElementById("detail-area").textContent = "Selected sample area: " + clean + ". Add verified details here when available.";
+  }
+</script>
+
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <div><strong>LightOn Karachi</strong><p class="small">An educational demo website.</p><p class="small">© <span data-current-year>2026</span> LightOn Karachi</p></div>
+      <div class="footer-links"><a href="disclaimer.html">Disclaimer</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
